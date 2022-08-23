@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>congestion.calculator</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Vehicles\" />
+    <None Remove="TaxCalculator\" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vehicles\" />
+    <Folder Include="TaxCalculator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\TaxCalculatorController.cs" />
+  </ItemGroup>
+</Project>
