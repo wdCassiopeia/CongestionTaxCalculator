@@ -15,7 +15,7 @@ namespace TaxCalculationWebApi.Controllers;
             if (vehicleData.vehicleType == "Car") {
                 return CongestionTaxCalculator.GetTax(new Car(), vehicleData.dateTimes);
 
-            } else if (vehicleData.vehicleType == "Motorbike") {
+            } else if (vehicleData.vehicleType == "Motorbike" ) {
                 return CongestionTaxCalculator.GetTax(new Motorbike(), vehicleData.dateTimes);
                 
 
@@ -23,7 +23,7 @@ namespace TaxCalculationWebApi.Controllers;
                 return CongestionTaxCalculator.GetTax(new Bus(), vehicleData.dateTimes);
 
             } else {
-                throw new System.Exception("bla");
+                throw new System.Exception("Not a valid vehicle!");
             }
         }
     }

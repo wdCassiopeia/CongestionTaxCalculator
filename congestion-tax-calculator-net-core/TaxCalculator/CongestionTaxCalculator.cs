@@ -1,6 +1,6 @@
 using System;
 using congestion.calculator.Vehicles;
-
+using System.Linq;
 
 namespace congestion.calculator
 {
@@ -17,6 +17,8 @@ namespace congestion.calculator
 
         public static int GetTax(Vehicle vehicle, DateTime[] dates)
         {
+            dates = dates.OrderBy(d => d).ToArray();
+
             DateTime intervalStart = dates[0];
             
             int totalFee = 0;
