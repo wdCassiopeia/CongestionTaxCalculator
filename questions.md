@@ -7,3 +7,4 @@
     3) vehicles without toll
     4) max amount per day
 and whereas the points 2, 3 and 4 should be easy to store and implement, the first one would be a little trickier. It would be doable though - with a little more time than 4 hours max.
+- Another comment: I did not implement a class for each vehicle type (it would be the same as the other ones) because I still think it should be solved just by vehicleType property.
